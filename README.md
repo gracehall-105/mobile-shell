@@ -25,3 +25,5 @@ This architecture is widely used by production apps and allows you to:
 • progressively add native functionality when needed
 
 For most Lovable builders, this is the fastest path to mobile distribution.
+
+🔗 https://developer.apple.com/help/app-store-connect/manage-submissions-to-app-review/submit-an-app/
