@@ -1,99 +1,97 @@
-Set up this Lovable React app to run as a native mobile app using Capacitor so it can be distributed on iOS and Android.
+Set up this Lovable React app so it can run as an installable iOS and Android mobile app using Capacitor.
 
 Follow these requirements carefully.
 
 1. Install Capacitor
 
-Add the following dependencies to the project:
+Install the required dependencies:
 
-@capacitor/core  
-@capacitor/cli  
-@capacitor/ios  
-@capacitor/android
+npm install @capacitor/core @capacitor/cli @capacitor/ios @capacitor/android
 
 Update package.json accordingly.
 
 
 2. Initialize Capacitor
 
-Create a capacitor.config.ts file with this structure:
+Create a capacitor.config.ts file with this configuration structure:
 
-- appId: use a placeholder like "com.yourcompany.appname"
-- appName: use the project name
-- webDir: "dist"
-- bundledWebRuntime: false
+appId: use a placeholder like "com.yourcompany.appname"
+appName: use the project name
+webDir: "dist"
+bundledWebRuntime: false
 
-Do NOT hardcode a specific company or domain.
+Do NOT hardcode a real company or domain.
 
 
 3. Development Hot Reload
 
-Add an optional Capacitor server configuration that allows hot reload during development.
+Add an optional Capacitor server configuration to allow hot reload during development.
 
-The URL should be a placeholder such as:
+Use a placeholder URL such as:
 
 https://your-app-name.lovable.app
 
-This should be clearly marked as a value the builder must update.
+Clearly mark this as something the builder must update.
 
 
 4. Mobile Build Scripts
 
-Add scripts to package.json for mobile builds:
+Add the following scripts to package.json:
 
-cap:sync  
-cap:ios  
+cap:sync
+cap:ios
 cap:android
 
-Ensure these scripts run:
+Ensure they run:
 
-npx cap sync  
-npx cap run ios  
+npx cap sync
+npx cap run ios
 npx cap run android
 
 
 5. GitHub-Friendly Setup
 
-Ensure the repository includes:
+Ensure the repository contains:
 
-capacitor.config.ts  
-package.json updates  
+capacitor.config.ts
+package.json updates
 mobile build scripts
 
-Do NOT generate ios/ or android/ folders yet because those are created locally with:
+Do NOT generate ios/ or android/ folders yet.
 
-npx cap add ios  
+These should be created locally with:
+
+npx cap add ios
 npx cap add android
 
 
 6. Optional Mobile UX Improvements
 
-Add optional improvements that make the app feel more native:
+Add optional improvements that make the UI feel mobile-friendly:
 
-- System-safe font stack
-- Platform spacing conventions
-- Touch-friendly layout
-- Safe area handling for iOS
+- system-safe font stack
+- touch-friendly spacing
+- safe area handling for iOS
 
-These should not break the web version.
+These improvements must not break the web version.
 
 
 7. Documentation
 
 Create a README section titled:
 
-"Running as a Mobile App"
+Running as a Mobile App
 
-Include instructions:
+Include these instructions:
 
-npm install  
-npm run build  
-npx cap add ios  
-npx cap add android  
-npx cap sync  
-npx cap run ios  
+npm install
+npm run build
+npx cap add ios
+npx cap add android
+npx cap sync
+npx cap run ios
 npx cap run android
 
 
 Important:
-This setup should work for any Lovable React project without requiring custom infrastructure.
+This configuration should work for any Lovable React project without requiring custom infrastructure.
